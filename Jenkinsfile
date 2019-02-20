@@ -15,6 +15,13 @@ node{
          teamDomain: 'jenkinshomecloud', 
          tokenCredentialId: 'slack-demo1'
    }
-   
+   stage('Slack Notification'){
+      slackSend baseUrl: 'https://hooks.slack.com/services/', 
+         channel: 'manchala', 
+         color: 'good', message: 
+         'welcome to manchala', 
+         teamDomain: 'manchala', 
+         tokenCredentialId: 'slack'  
+   }
    
    }
